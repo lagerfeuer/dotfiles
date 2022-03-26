@@ -1,0 +1,15 @@
+zsh
+git
+vim
+stow
+firefox
+starship
+code
+emacs
+zsh-completions
+unzip
+man
+fzf
+tmux
+docker
+vagrant
