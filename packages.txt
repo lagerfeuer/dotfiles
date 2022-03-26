@@ -19,3 +19,6 @@ python-pip
 exa
 bat
 glow
+jq
+yq
+awscli
