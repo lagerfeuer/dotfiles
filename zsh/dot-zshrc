@@ -6,3 +6,6 @@ if [[ -d ~/.zsh.d ]]; then
 		source ${src}
 	done
 fi
+
+eval "$(starship init zsh)"
+

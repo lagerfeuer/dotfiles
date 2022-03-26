@@ -13,3 +13,9 @@ fzf
 tmux
 docker
 vagrant
+ruby
+docker-compose
+python-pip
+exa
+bat
+glow
