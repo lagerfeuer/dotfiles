@@ -22,3 +22,8 @@ glow
 jq
 yq
 awscli
+aspell
+fd
+sbcl
+go
+rust

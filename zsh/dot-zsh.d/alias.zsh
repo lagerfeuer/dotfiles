@@ -7,3 +7,5 @@ alias readme='glow -p README.md'
 alias vale-default='vale --config=$HOME/.vale.ini'
 
 alias gdc='git diff --cached'
+
+alias doom='~/.emacs.d/bin/doom'

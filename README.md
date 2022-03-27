@@ -1,9 +1,7 @@
 # dotfiles
 
 ## Dependencies
-- zsh
-- bat
-- exa
+- https://github.com/hlissner/doom-emacs
+
+### Optional
 - hgrep
-- ripgrep
-- yay
