@@ -1,33 +1,59 @@
+# Nord theme
+# bg:
+# - #2E3440
+# - #3B4252
+# - #434C5E
+# - #4C566A
+
+# fg:
+# - #D8DEE9
+# - #E5E9F0
+# - #ECEFF4
+
+# green-blue: #8FBCBB
+# sky-blue:   #88C0D0
+# frost-blue: #81A1C1
+# dark-blue:  #5E81AC
+
+# red:    #BF616A
+# orange: #D08770
+# yellow: #EBCB8B
+# green:  #A3BE8C
+# purple: #B48EAD
+
 format = """
-[](#9A348E)\
+[](#D8DEE9)\
 $username\
-[](bg:#DA627D fg:#9A348E)\
+[](fg:#D8DEE9 bg:#4C566A)\
 $directory\
-[](fg:#DA627D bg:#FCA17D)\
+[](fg:#4C566A bg:#EBCB8B)\
 $git_branch\
 $git_status\
-[](fg:#FCA17D bg:#86BBD8)\
+[](fg:#EBCB8B bg:#86BBD8)\
 $nodejs\
-$rust\
-[](fg:#86BBD8 bg:#33658A)\
+[ ](fg:#86BBD8)\
+"""
+
+right_format = """
+[](#4C566A)\
 $time\
-[ ](fg:#33658A)\
+[](fg:#4C566A)\
 """
 
 # Disable the blank line at the start of the prompt
-# add_newline = false
+# add_newline = true
 
 # You can also replace your username with a neat symbol like  to save some space
 [username]
 show_always = true
-style_user = "bg:#9A348E"
-style_root = "bg:#9A348E"
-format = '[$user ]($style)'
+style_user = "fg:#2E3440 bg:#D8DEE9"
+style_root = "fg:#D8DEE9 bg:#BF616A"
+format = '[  ]($style)'
 
 [directory]
-style = "bg:#DA627D"
+style = "fg:#D8DEE9 bg:#4C566A"
 format = "[ $path ]($style)"
-truncation_length = 3
+truncation_length = 40
 truncation_symbol = "…/"
 
 # Here is how you can shorten some long paths by text replacement
@@ -45,26 +71,20 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:#FCA17D"
-format = '[[ $symbol $branch ](bg:#FCA17D)]($style)'
+style = "bg:#EBCB8B"
+format = '[[ $symbol $branch ](fg:#2E3440 bg:#EBCB8B)]($style)'
 
 [git_status]
-style = "bg:#FCA17D"
-format = '[[($all_status$ahead_behind )](bg:#FCA17D)]($style)'
+style = "bg:#EBCB8B"
+format = '[[($all_status$ahead_behind )](fg:#2E3440 bg:#EBCB8B)]($style)'
 
 [nodejs]
 symbol = ""
 style = "bg:#86BBD8"
 format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
 
-[rust]
-symbol = ""
-style = "bg:#86BBD8"
-format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
-
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#33658A"
-format = '[[ ♥ $time ](bg:#33658A)]($style)'
-
+style = "bg:#4C566A"
+format = '[[   $time ](bg:#4C566A)]($style)'
