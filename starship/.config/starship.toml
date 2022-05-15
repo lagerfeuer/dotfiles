@@ -30,7 +30,9 @@ $directory\
 $git_branch\
 $git_status\
 [](fg:#EBCB8B bg:#86BBD8)\
+$python\
 $nodejs\
+$terraform\
 [ ](fg:#86BBD8)\
 """
 
