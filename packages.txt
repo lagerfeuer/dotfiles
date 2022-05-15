@@ -27,3 +27,10 @@ fd
 sbcl
 go
 rust
+thunderbird
+pass
+xclip
+networkmanager
+htop
+lsof
+strace
