@@ -1,3 +1,3 @@
-PATH="${PATH}:/home/ghost/.local/bin"
+PATH="${PATH}:${HOME}/.local/bin"
 export PATH
 
