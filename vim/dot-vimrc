@@ -1,0 +1,144 @@
+" General
+autocmd!
+syntax on
+set nu
+" set relativenumber
+set autoread
+set laststatus=2
+set encoding=utf-8
+set t_Co=256
+set background=dark
+
+" Improved Enter
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" Leader
+let mapleader=","
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=/usr/share/vim/vimfiles/autoload/vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+" Completion/Code
+Plugin 'maralla/completor.vim'
+Plugin 'w0rp/ale'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
+Plugin 'matze/vim-move'
+" C/C++
+Plugin 'justmao945/vim-clang'
+Plugin 'rhysd/vim-clang-format'
+Plugin 'ericcurtin/CurtineIncSw.vim'
+" Python
+" Plugin 'ambv/black'
+" Plugin 'nvie/vim-flake8'
+Plugin 'tell-k/vim-autopep8'
+" Lisp
+Plugin 'l04m33/vlime', {'rtp': 'vim/'}
+Plugin 'junegunn/rainbow_parentheses.vim'
+" Latex
+Plugin 'lervag/vimtex'
+" Crystal
+Plugin 'rhysd/vim-crystal'
+" Airline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+" NerdTree
+Plugin 'scrooloose/nerdtree'
+" Ranger
+Plugin 'francoiscabrol/ranger.vim'
+" TMUX
+Plugin 'tmux-plugins/vim-tmux'
+" Colorschemes
+Plugin 'sjl/badwolf'
+Plugin 'notpratheek/vim-luna'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'w0ng/vim-hybrid'
+Plugin 'jacoborus/tender.vim'
+Plugin 'joshdick/onedark.vim'
+Plugin 'trusktr/seti.vim'
+" Misc Langs
+Plugin 'harenome/vim-mipssyntax'
+Plugin 'pearofducks/ansible-vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" Indentation
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smarttab
+
+" Colorschemes and GUI
+if (has("termguicolors"))
+    set termguicolors
+endif
+if has('gui_running')
+  set guifont=Source\ Code\ Pro\ 12
+  set anti enc=utf-8
+endif
+
+" colorscheme onedark
+" let g:airline_theme='onedark'
+let g:airline_theme='dark'
+colorscheme seti
+
+" hide default mode indicator
+set noshowmode
+
+" powerline
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+
+" vim-move <C-k> up / <C-j> down
+" <C-k>/<C-j> already in use for window movement, default <A-k>/<A-j>
+" let g:move_key_modifier = 'C'
+
+" Python
+let g:autopep8_on_save = 1
+let g:autopep8_disable_show_diff=1
+let g:autopep8_ignore="E226,E24,W6,E731"
+
+""" C/C++
+let g:clang_format#detect_style_file = 1
+let g:clang_format#style_options = {
+            \ "AllowShortIfStatementsOnASingleLine" : "true",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "FixNamespaceComments": "true",
+            \ "IndentWidth" : 2,
+            \ "PointerBindsToType": "true",
+            \ "Standard" : "Auto"}
+autocmd FileType c,cpp nnoremap <buffer><Leader>f :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp vnoremap <buffer><Leader>f :ClangFormat<CR>
+autocmd FileType c,cpp ClangFormatAutoEnable
+nmap <Leader>C :ClangFormatAutoToggle<CR>
+"map <leader>f :ClangFormat<CR>
+map <leader>a :call CurtineIncSw()<CR>
+
+""" NerdTree
+map <C-n> :NERDTreeToggle<CR>
+
+""" Latex
+let g:tex_flavor = 'latex'
+
+""" Lisp
+augroup rainbow_lisp
+  autocmd FileType lisp,clojure,scheme RainbowParentheses
+augroup END
+" Prolog
+au BufReadPost *.plt setf prolog
