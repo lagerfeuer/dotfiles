@@ -1,0 +1,12 @@
+function mfa {
+  op item get AWS --vault Work --otp
+}
+
+function ar {
+  awsume --mfa-token "$(mfa)" $@
+}
+alias unar='awsume --unset'
+
+alias aws-get-id='aws sts get-caller-identity | jq .'
+alias aws-whoami='aws sts get-caller-identity | jq .'
+alias aws-roles='awk '\''/\[profile [a-z]/ { print $2 }'\'' $HOME/.aws/config |tr -d \]'
