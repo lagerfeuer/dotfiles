@@ -2,3 +2,5 @@ antigen
 
 asdf-vm
 vale
+tmux-plugin-manager-git
+

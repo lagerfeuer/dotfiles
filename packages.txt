@@ -34,3 +34,6 @@ networkmanager
 htop
 lsof
 strace
+powerline
+most
+ranger
