@@ -8,7 +8,3 @@ alias awsume="source awsume"
 #Auto-Complete function for AWSume
 #Auto-Complete function for AWSume
 fpath=(~/.awsume/zsh-autocomplete/ $fpath)
-
-# Enable IME support for fig
-# https://wiki.archlinux.org/title/Kitty#Enable_IME_support
-GLFW_IM_MODULE=ibus
