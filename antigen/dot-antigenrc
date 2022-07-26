@@ -12,13 +12,12 @@ antigen bundle command-not-found
 antigen bundle docker
 antigen bundle git
 antigen bundle gitignore
-antigen bundle httpie
 antigen bundle jsontools
 antigen bundle lol
 antigen bundle python
 antigen bundle ripgrep
 antigen bundle ruby
-antigen bundle tmux
+# antigen bundle tmux
 antigen bundle vagrant
 
 # Load bundles from external repos
