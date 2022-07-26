@@ -1,7 +1,7 @@
 [user]
   name = Lukas Deutz
   email = github@deutz.io
-[includeIf "gitdir:~/gitlab/"]
+[includeIf "gitdir:~/code/gitlab/"]
   path = ~/.gitlab.gitconfig
 [includeIf "gitdir:~/work/"]
   path = ~/.rtg.gitconfig
