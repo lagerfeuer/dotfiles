@@ -42,7 +42,9 @@ $line_break$character
 right_format = """
 [](#EBCB8B)\
 $aws\
-[](fg:#4C566A bg:#EBCB8B)\
+[](fg:#3C873A bg:#EBCB8B)\
+$nodejs
+[](fg:#4C566A bg:#3C873A)\
 $time\
 [](fg:#4C566A)\
 """
@@ -87,8 +89,8 @@ format = '[[($all_status$ahead_behind )](fg:#2E3440 bg:#EBCB8B)]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#86BBD8"
-format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
+style = "bg:#3C873A"
+format = '[[ $symbol ($version) ](bg:#3C873A)]($style)'
 
 # [terraform]
 # format = "[ $symbol v$version]($style)"
