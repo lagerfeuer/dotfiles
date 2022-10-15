@@ -53,9 +53,9 @@ Plug 'ericcurtin/CurtineIncSw.vim'
 " Python
 Plug 'davidhalter/jedi'
 Plug 'zchee/deoplete-jedi'
-Plug 'tell-k/vim-autopep8'
 Plug 'tmhedberg/SimpylFold'
 Plug 'zhimsel/vim-stay'
+Plug 'psf/black', { 'branch': 'stable' }
 " Crystal
 Plug 'rhysd/vim-crystal'
 " Latex
@@ -125,9 +125,6 @@ let g:deoplete#sources#jedi#show_docstring = 1
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 """ Python
-let g:autopep8_on_save = 1
-let g:autopep8_disable_show_diff = 1
-let g:autopep8_ignore="E226,E24,W6,E731"
 " Jedi
 let g:jedi#show_call_signatures = 2
 map <leader>s :call jedi#force_py_version_switch()<CR>
