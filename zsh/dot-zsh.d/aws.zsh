@@ -7,7 +7,7 @@ function mfa {
 }
 
 function ar {
-  awsume --mfa-token "$(mfa)" $@
+  awsume --session-name "ldeutz" --mfa-token "$(mfa)" $@
 }
 alias unar='awsume --unset'
 
