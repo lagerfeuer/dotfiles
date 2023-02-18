@@ -3,7 +3,7 @@ if [[ -f /usr/bin/aws_zsh_completer.sh ]]; then
 fi
 
 function mfa {
-  op item get AWS --vault Work --otp
+  op item get 'AWS RTG' --vault Work --otp
 }
 
 function ar {
