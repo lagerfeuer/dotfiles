@@ -44,6 +44,8 @@ call plug#begin()
 
 " Autocomplete/Syntax-Check
 Plug 'Shougo/deoplete.nvim'
+" Terraform
+Plug 'hashivim/vim-terraform'
 " C/C++
 " Plug 'zchee/deoplete-clang'
 Plug 'neomake/neomake'
